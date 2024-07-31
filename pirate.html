@@ -6,9 +6,19 @@
     <title>Audio Playback</title>
 </head>
 <body>
-    <audio id="audio" controls autoplay>
-        <source src="https://www.opendrive.com/player/NTJfNDY4ODkxNDBfSHdta3I" type="audio/mpeg">
+    <button id="playButton">Play Audio</button>
+    <audio id="audio" preload="auto">
+        <source src="https://www.opendrive.com/s/yourfile.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
+
+    <script>
+        document.getElementById('playButton').addEventListener('click', function() {
+            var audio = document.getElementById('audio');
+            audio.play().catch(function(error) {
+                console.error('Playback error:', error);
+            });
+        });
+    </script>
 </body>
 </html>
