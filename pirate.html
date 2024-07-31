@@ -6,19 +6,7 @@
     <title>Audio Playback</title>
 </head>
 <body>
-    <button id="playButton">Play Audio</button>
-    <audio id="audio" preload="auto">
-        <source src="https://od.lk/f/NTJfNDY4ODkxNDBf" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-
-    <script>
-        document.getElementById('playButton').addEventListener('click', function() {
-            var audio = document.getElementById('audio');
-            audio.play().catch(function(error) {
-                console.error('Playback error:', error);
-            });
-        });
-    </script>
+    <h1>Audio Playback</h1>
+    <iframe src="https://www.opendrive.com/player/NTJfNDY4ODkxNDBfSHdta3I" height="25" width="297" style="border:0" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
 </body>
 </html>
