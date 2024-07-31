@@ -4,20 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audio Playback</title>
-    <style>
-        /* Optional: Adjust iframe styling */
-        iframe {
-            border: none;
-            width: 300px;
-            height: 60px;
-        }
-    </style>
 </head>
 <body>
     <h1>Audio Playback</h1>
-    <div>
-        <iframe id="audioFrame" src="https://vocaroo.com/embed/1b2BVBmkDbkT?autoplay=1" frameborder="0" allow="autoplay"></iframe><br>
-        <a href="https://voca.ro/1b2BVBmkDbkT" title="Vocaroo Voice Recorder" target="_blank">View on Vocaroo &gt;&gt;</a>
-    </div>
+    <audio id="audio" autoplay>
+        <source src="https://vocaroo.com/media/1b2BVBmkDbkT.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 </body>
 </html>
