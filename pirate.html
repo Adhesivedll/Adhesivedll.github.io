@@ -7,6 +7,21 @@
 </head>
 <body>
     <h1>Audio Playback</h1>
-    <iframe src="https://www.opendrive.com/player/NTJfNDY4ODkxNDBfSHdta3I" height="25" width="297" style="border:0" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+    <iframe id="audioFrame" src="https://www.opendrive.com/player/NTJfNDY4ODkxNDBfSHdta3I" height="25" width="297" style="border:0" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+    <button id="playButton">Play Audio</button>
+
+    <script>
+        document.getElementById('playButton').addEventListener('click', function() {
+            var iframe = document.getElementById('audioFrame');
+            var iframeSrc = iframe.src;
+
+            // Append autoplay parameter if possible
+            if (iframeSrc.indexOf('?') > -1) {
+                iframe.src = iframeSrc + '&autoplay=1';
+            } else {
+                iframe.src = iframeSrc + '?autoplay=1';
+            }
+        });
+    </script>
 </body>
 </html>
